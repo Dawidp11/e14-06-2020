@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title>malarz </title>    
+      <link rel="stylesheet" type="text/css" href="styl.css">
+
+        <script type="text/javascript">
+            function fik1()
+            {
+             let powierzchnia = document.getElementById('formularz').powierzchnia.value;
+             let litry        = powierzchnia / 4;
+             let puszki       = Math.ceil(litry);
+             document.getElementById('wynik').innerHTML ="Liczba jednolitrowych puszek farby potrzebnych do pomalowania wynosi:" + puszki;
+             return false;
+            }       
+        </script>
+    </head>    
+    <body>
+    <div id="baner"> 
+        <h1><a href="index.html">Koszty farby</a></h1>
+    </div>
+        <div id="lewy">
+            <h3>Mieszamy czy wyceniamy?</h3>
+            <a href="mieszamy.html">Mieszamy</a>
+            <p><a href="cena.html">Wycena</a></p>
+        </div>
+            <div id="prawy">
+             <h3>Obliczanie na podstawie powierzchni zapotrzebowania na farbę😂</h3>
+                <form id="formularz" name="formularz">
+                     Podaj powierzchnię: <input type="text" name="powierzchnia" value=""><br />
+                    <button type="button" name="button" onclick="fik1()">Policz</button>
+                </form>
+               <p id="wynik"></p>
+            </div> 
+    <div id="stopka">MALARZ <br/>
+        Stronę opracował: Dawid   
+    </div>
+ </body>   
+</html>
